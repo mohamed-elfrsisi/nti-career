@@ -44,11 +44,14 @@ body {
     flex-direction: column;
 }
 
-/* --- 3. NAVBAR STYLING --- */
+/* --- NAVBAR STYLING --- */
 .navbar {
     min-height: var(--navbar-height);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    background: rgba(0, 26, 51, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .brand-icon {
@@ -68,6 +71,8 @@ body {
     font-size: 1.4rem;
     letter-spacing: 0.5px;
     margin-left: 10px;
+    color: white;
+    text-decoration: none;
 }
 
 .nav-link {
@@ -105,23 +110,79 @@ body {
     color: white !important;
 }
 
-/* Registration Button */
-.btn-register {
-    background-color: var(--primary-blue);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* Auth Buttons Container */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Login Button - Outline Style */
+.btn-login {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     color: white;
     padding: 10px 24px;
     border-radius: 50px;
-    /* Pill shape is more modern */
     font-weight: 600;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-login:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Register Button - Filled Style */
+.btn-register {
+    background: linear-gradient(135deg, var(--accent-cyan), #0088cc);
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 174, 239, 0.3);
 }
 
 .btn-register:hover {
-    background-color: var(--accent-cyan);
     transform: translateY(-2px);
-    /* Slight lift effect */
-    box-shadow: 0 5px 15px rgba(0, 174, 239, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 174, 239, 0.5);
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .auth-buttons {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-login,
+    .btn-register {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 26, 51, 0.98);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
 }
 
 /* --- 4. HERO BODY (TEXT & SEARCH) --- */

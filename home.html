@@ -34,94 +34,123 @@
 
         <div class="container hero-content-wrapper">
 
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-                <div class="container-fluid px-0">
+            <!DOCTYPE html>
+            <html lang="en">
 
-                    <a class="navbar-brand" href="home.html">
-                        <div class="brand-icon">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <span class="brand-text">NTI CAREER</span>
-                    </a>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>NTI Career - Navbar Demo</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+                    rel="stylesheet">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <div class="container-fluid px-4">
 
-                    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#find_jops">Find Jobs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://nti.sci.eg/dey/signin.php"
-                                    target="_blank">About NTI</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#tracks">Tracks</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="d-none d-lg-block">
-                        <a href="register.html" class="btn btn-register">
-                            <i class="fa-solid fa-user-plus me-2"></i>Registration
+                        <a class="navbar-brand d-flex align-items-center" href="home.html">
+                            <div class="brand-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span class="brand-text">NTI CAREER</span>
                         </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#find_jobs">Find Jobs</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://nti.sci.eg/dey/signin.php"
+                                        target="_blank">About NTI</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tracks">Tracks</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            </ul>
+
+                            <!-- Auth Buttons for Mobile (visible only on mobile) -->
+                            <div class="d-lg-none auth-buttons">
+                                <a href="sign-in.html" class="btn-login">
+                                    <i class="fa-solid fa-sign-in-alt"></i> Login
+                                </a>
+                                <a href="register.html" class="btn-register">
+                                    <i class="fa-solid fa-user-plus"></i> Register
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Auth Buttons for Desktop -->
+                        <div class="d-none d-lg-block auth-buttons">
+                            <a href="sign-in.html" class="btn-login">
+                                <i class="fa-solid fa-sign-in-alt"></i> Login
+                            </a>
+                            <a href="register.html" class="btn-register">
+                                <i class="fa-solid fa-user-plus"></i> Register
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hero-body">
+
+                    <div class="text-center mb-5 animate__animated animate__fadeInUp">
+                        <p class="hero-subtitle">
+                            <span class="badge-count">1,240</span> opportunities available
+                        </p>
+                        <h1 class="hero-title">Build Your Future with NTI</h1>
+                        <p class="hero-desc">
+                            Join the leading technology institute. Find the best training programs
+                            and jobs to launch your career in tech.
+                        </p>
+                    </div>
+
+                    <div class="search-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+                        <form class="search-form row g-0">
+
+                            <div class="col-lg-5 col-md-12 border-end-lg">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fa-regular fa-keyboard"></i></span>
+                                    <input type="text" class="form-control"
+                                        placeholder="Job title, keywords, or company">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 border-end-lg">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <select class="form-select">
+                                        <option selected>Choose City</option>
+                                        <option value="1">Cairo</option>
+                                        <option value="2">Giza</option>
+                                        <option value="3">Alexandria</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <div class="input-group">
+                                    <span class="input-icon"><i class="fa-solid fa-layer-group"></i></span>
+                                    <select class="form-select">
+                                        <option selected>Category</option>
+                                        <option value="1">Network</option>
+                                        <option value="2">Programming</option>
+                                        <option value="3">AI & Data</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 col-md-12">
+                                <button type="submit" class="btn btn-search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </nav>
-
-            <div class="hero-body">
-
-                <div class="text-center mb-5 animate__animated animate__fadeInUp">
-                    <p class="hero-subtitle">
-                        <span class="badge-count">1,240</span> opportunities available
-                    </p>
-                    <h1 class="hero-title">Build Your Future with NTI</h1>
-                    <p class="hero-desc">
-                        Join the leading technology institute. Find the best training programs
-                        and jobs to launch your career in tech.
-                    </p>
-                </div>
-
-                <div class="search-wrapper animate__animated animate__fadeInUp animate__delay-1s">
-                    <form class="search-form row g-0">
-
-                        <div class="col-lg-5 col-md-12 border-end-lg">
-                            <div class="input-group">
-                                <span class="input-icon"><i class="fa-regular fa-keyboard"></i></span>
-                                <input type="text" class="form-control" placeholder="Job title, keywords, or company">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 border-end-lg">
-                            <div class="input-group">
-                                <span class="input-icon"><i class="fa-solid fa-location-dot"></i></span>
-                                <select class="form-select">
-                                    <option selected>Choose City</option>
-                                    <option value="1">Cairo</option>
-                                    <option value="2">Giza</option>
-                                    <option value="3">Alexandria</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="input-group">
-                                <span class="input-icon"><i class="fa-solid fa-layer-group"></i></span>
-                                <select class="form-select">
-                                    <option selected>Category</option>
-                                    <option value="1">Network</option>
-                                    <option value="2">Programming</option>
-                                    <option value="3">AI & Data</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-1 col-md-12">
-                            <button type="submit" class="btn btn-search">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </header>
 
@@ -449,12 +478,12 @@
                     </div>
 
                     <!-- Controls -->
-                     
-                        <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel"
-                        data-bs-slide="prev" >
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
-                         </button>
+                    </button>
 
                     <button class="carousel-control-next" type="button" data-bs-target="#categoriesCarousel"
                         data-bs-slide="next">
@@ -462,7 +491,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
 
-                     
+
 
 
                     <!-- Indicators -->
