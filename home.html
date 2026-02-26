@@ -34,26 +34,11 @@
 
         <div class="container hero-content-wrapper">
 
-            <!DOCTYPE html>
-            <html lang="en">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>NTI Career - Navbar Demo</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-                    rel="stylesheet">
-
                 <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                     <div class="container-fluid px-4">
 
                         <a class="navbar-brand d-flex align-items-center" href="home.html">
-                            <div class="brand-icon">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
                             <span class="brand-text">NTI CAREER</span>
                         </a>
 
@@ -108,7 +93,7 @@
                         </p>
                     </div>
 
-                    <div class="search-wrapper animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="search-wrapper animate__animated animate__fadeInUp animate__delay-1s bg-info">
                         <form class="search-form row g-0">
 
                             <div class="col-lg-5 col-md-12 border-end-lg">
@@ -485,7 +470,7 @@
                         <span class="visually-hidden">Previous</span>
                     </button>
 
-                    <button class="carousel-control-next" type="button" data-bs-target="#categoriesCarousel"
+                    <button class="carousel-control-next " type="button" data-bs-target="#categoriesCarousel"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -516,407 +501,229 @@
         </div>
     </section>
 
-    <!-- SECTION 3: LATEST JOBS DUAL CAROUSEL -->
-    <section class="jobs-section" id="find_jops">
-        <div class="container">
-            <div class="jobs-header">
-                <span class="jobs-badge">Hot Opportunities</span>
-                <h2 class="jobs-title">Latest Jobs</h2>
-                <p class="jobs-subtitle">
-                    Discover the most recent opportunities from top tech companies.
-                    Fresh positions updated daily.
+  <!-- section latest jobs -->
+        <!-- SECTION: LATEST JOBS - تصميم قائمة مع تفاصيل تفاعلية -->
+<section class="latest-jobs-section" id="find_jobs">
+    <div class="container">
+        <!-- Header -->
+        <div class="section-header">
+            <div class="header-content">
+                <span class="live-badge">
+                    <span class="pulse"></span>
+                    Available Now
+                </span>
+                <h2 class="section-title">Latest Job Opportunities</h2>
+                <p class="section-desc">
+                    Fresh jobs from leading tech companies updated daily
                 </p>
             </div>
+            <a href="jobs.html" class="btn-view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
 
-        <!-- Top Carousel - Moves Left -->
-        <div class="carousel-track-wrapper track-wrapper-top">
-            <div class="carousel-track track-left" id="trackLeft">
-                <!-- Job Card 1 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-google"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Full Time</span>
-                            <span class="job-urgent">Urgent</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">Senior Frontend Developer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Google Inc.
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 2 days ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">React</span>
-                        <span class="job-tag">TypeScript</span>
-                        <span class="job-tag">Node.js</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$5,000 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
+        <!-- Jobs List -->
+        <div class="jobs-list">
 
-                <!-- Job Card 2 -->
-                <div class="job-card featured">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-microsoft"></i>
+            <!-- Job Item 1 -->
+            <article class="job-item">
+                <div class="job-company-logo">
+                    <img src="https://via.placeholder.com/65x65/4285F4/FFFFFF?text=G" alt="Google">
+                </div>
+                <div class="job-info">
+                    <div class="job-header">
+                        <h3 class="job-title">Senior Frontend Developer</h3>
+                        <div class="job-badges">
+                            <span class="badge badge-new">New</span>
+                            <span class="badge badge-urgent">Urgent</span>
                         </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Remote</span>
-                        </div>
                     </div>
-                    <h3 class="job-title">Cloud Solutions Architect</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Microsoft
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 5 hours ago</span>
-                    </div>
+                    <div class="job-company">Google • Cairo, Egypt</div>
                     <div class="job-tags">
-                        <span class="job-tag">Azure</span>
-                        <span class="job-tag">AWS</span>
-                        <span class="job-tag">DevOps</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$8,500 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Next.js</span>
                     </div>
                 </div>
+                <div class="job-meta">
+                    <div class="job-salary">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        25,000 - 35,000 EGP
+                    </div>
+                    <div class="job-type">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Full Time
+                    </div>
+                </div>
+                <div class="job-actions">
+                    <button class="btn-save">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                    <a href="#" class="btn-apply-job">Apply Now</a>
+                </div>
+            </article>
 
-                <!-- Job Card 3 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-aws"></i>
+            <!-- Job Item 2 - Featured -->
+            <article class="job-item featured">
+                <div class="job-company-logo">
+                    <img src="https://via.placeholder.com/65x65/00A4EF/FFFFFF?text=M" alt="Microsoft">
+                </div>
+                <div class="job-info">
+                    <div class="job-header">
+                        <h3 class="job-title">Cloud Solutions Architect</h3>
+                        <div class="job-badges">
+                            <span class="badge badge-featured">Featured</span>
+                            <span class="badge badge-remote">Remote</span>
                         </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Full Time</span>
-                        </div>
                     </div>
-                    <h3 class="job-title">Machine Learning Engineer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Amazon Web Services
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Alexandria</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 1 day ago</span>
-                    </div>
+                    <div class="job-company">Microsoft • Egypt (Remote)</div>
                     <div class="job-tags">
-                        <span class="job-tag">Python</span>
-                        <span class="job-tag">TensorFlow</span>
-                        <span class="job-tag">AWS</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$6,500 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
+                        <span>Azure</span>
+                        <span>Kubernetes</span>
+                        <span>Terraform</span>
                     </div>
                 </div>
+                <div class="job-meta">
+                    <div class="job-salary">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        40,000 - 55,000 EGP
+                    </div>
+                    <div class="job-type">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Remote
+                    </div>
+                </div>
+                <div class="job-actions">
+                    <button class="btn-save saved">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <a href="#" class="btn-apply-job">Apply Now</a>
+                </div>
+            </article>
 
-                <!-- Job Card 4 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-meta"></i>
+            <!-- Job Item 3 -->
+            <article class="job-item">
+                <div class="job-company-logo">
+                    <img src="https://via.placeholder.com/65x65/FF9900/FFFFFF?text=A" alt="Amazon">
+                </div>
+                <div class="job-info">
+                    <div class="job-header">
+                        <h3 class="job-title">Machine Learning Engineer</h3>
+                        <div class="job-badges">
+                            <span class="badge badge-new">New</span>
                         </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Contract</span>
-                            <span class="job-urgent">Hot</span>
-                        </div>
                     </div>
-                    <h3 class="job-title">Cybersecurity Specialist</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Meta
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Giza</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 3 days ago</span>
-                    </div>
+                    <div class="job-company">Amazon • Alexandria, Egypt</div>
                     <div class="job-tags">
-                        <span class="job-tag">Security+</span>
-                        <span class="job-tag">CISSP</span>
-                        <span class="job-tag">Penetration Testing</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$7,000 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>AWS</span>
                     </div>
                 </div>
+                <div class="job-meta">
+                    <div class="job-salary">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        30,000 - 45,000 EGP
+                    </div>
+                    <div class="job-type">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Full Time
+                    </div>
+                </div>
+                <div class="job-actions">
+                    <button class="btn-save">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                    <a href="#" class="btn-apply-job">Apply Now</a>
+                </div>
+            </article>
 
-                <!-- Job Card 5 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-apple"></i>
+            <!-- Job Item 4 -->
+            <article class="job-item">
+                <div class="job-company-logo">
+                    <img src="https://via.placeholder.com/65x65/000000/FFFFFF?text=N" alt="Netflix">
+                </div>
+                <div class="job-info">
+                    <div class="job-header">
+                        <h3 class="job-title">DevOps Engineer</h3>
+                        <div class="job-badges">
+                            <span class="badge badge-hot">Hot</span>
                         </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Full Time</span>
-                        </div>
                     </div>
-                    <h3 class="job-title">iOS Developer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Apple Inc.
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 12 hours ago</span>
-                    </div>
+                    <div class="job-company">Netflix • Giza, Egypt</div>
                     <div class="job-tags">
-                        <span class="job-tag">Swift</span>
-                        <span class="job-tag">SwiftUI</span>
-                        <span class="job-tag">UIKit</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$5,500 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
+                        <span>Docker</span>
+                        <span>Jenkins</span>
+                        <span>AWS</span>
                     </div>
                 </div>
+                <div class="job-meta">
+                    <div class="job-salary">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        28,000 - 38,000 EGP
+                    </div>
+                    <div class="job-type">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Full Time
+                    </div>
+                </div>
+                <div class="job-actions">
+                    <button class="btn-save">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                    <a href="#" class="btn-apply-job">Apply Now</a>
+                </div>
+            </article>
 
-                <!-- Job Card 6 -->
-                <div class="job-card featured">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-netflix"></i>
+            <!-- Job Item 5 -->
+            <article class="job-item">
+                <div class="job-company-logo">
+                    <img src="https://via.placeholder.com/65x65/1DA1F2/FFFFFF?text=T" alt="Twitter">
+                </div>
+                <div class="job-info">
+                    <div class="job-header">
+                        <h3 class="job-title">Backend Developer (Go)</h3>
+                        <div class="job-badges">
+                            <span class="badge badge-new">New</span>
+                            <span class="badge badge-remote">Remote</span>
                         </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Remote</span>
-                        </div>
                     </div>
-                    <h3 class="job-title">Data Engineer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Netflix
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 1 week ago</span>
-                    </div>
+                    <div class="job-company">Twitter • Egypt (Remote)</div>
                     <div class="job-tags">
-                        <span class="job-tag">Spark</span>
-                        <span class="job-tag">Kafka</span>
-                        <span class="job-tag">SQL</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$9,000 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
+                        <span>Go</span>
+                        <span>Microservices</span>
+                        <span>PostgreSQL</span>
                     </div>
                 </div>
-            </div>
+                <div class="job-meta">
+                    <div class="job-salary">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        35,000 - 50,000 EGP
+                    </div>
+                    <div class="job-type">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Remote
+                    </div>
+                </div>
+                <div class="job-actions">
+                    <button class="btn-save">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                    <a href="#" class="btn-apply-job">Apply Now</a>
+                </div>
+            </article>
+
         </div>
 
-        <div class="carousel-divider"></div>
+<div class="text-center">
+    <button class="btn-load-more" onclick="window.location.href='jobs.html'">
+        <i class="fa-solid fa-spinner fa-spin d-none"></i>
+        Load More
+    </button>
+</div>
 
-        <!-- Bottom Carousel - Moves Right -->
-        <div class="carousel-track-wrapper track-wrapper-bottom">
-            <div class="carousel-track track-right" id="trackRight">
-                <!-- Job Card 7 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-ibm"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Part Time</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">Network Administrator</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> IBM
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Alexandria</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 4 days ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Cisco</span>
-                        <span class="job-tag">CCNA</span>
-                        <span class="job-tag">LAN/WAN</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$3,500 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
-
-                <!-- Job Card 8 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-oracle"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Full Time</span>
-                            <span class="job-urgent">New</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">Database Administrator</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Oracle
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 6 hours ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Oracle DB</span>
-                        <span class="job-tag">PL/SQL</span>
-                        <span class="job-tag">Performance Tuning</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$4,800 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
-
-                <!-- Job Card 9 -->
-                <div class="job-card featured">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-salesforce"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Remote</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">Salesforce Developer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Salesforce
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 2 days ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Apex</span>
-                        <span class="job-tag">Visualforce</span>
-                        <span class="job-tag">Lightning</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$6,200 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
-
-                <!-- Job Card 10 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-uber"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Full Time</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">Backend Engineer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Uber
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Giza</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 3 days ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Go</span>
-                        <span class="job-tag">Microservices</span>
-                        <span class="job-tag">Redis</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$6,800 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
-
-                <!-- Job Card 11 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-spotify"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Contract</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">DevOps Engineer</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Spotify
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 1 week ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Kubernetes</span>
-                        <span class="job-tag">Docker</span>
-                        <span class="job-tag">Terraform</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$5,200 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
-
-                <!-- Job Card 12 -->
-                <div class="job-card">
-                    <div class="job-card-header">
-                        <div class="company-logo">
-                            <i class="fa-brands fa-adobe"></i>
-                        </div>
-                        <div class="job-badge-group">
-                            <span class="job-type">Full Time</span>
-                            <span class="job-urgent">Urgent</span>
-                        </div>
-                    </div>
-                    <h3 class="job-title">UX Researcher</h3>
-                    <div class="job-company">
-                        <i class="fa-solid fa-building"></i> Adobe
-                    </div>
-                    <div class="job-meta">
-                        <span class="job-meta-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
-                        <span class="job-meta-item"><i class="fa-solid fa-clock"></i> 1 day ago</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">User Research</span>
-                        <span class="job-tag">Figma</span>
-                        <span class="job-tag">Prototyping</span>
-                    </div>
-                    <div class="job-card-footer">
-                        <div class="job-salary">$4,500 <span>/ month</span></div>
-                        <a href="#" class="btn-apply">Apply <i class="fa-solid fa-paper-plane"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="container">
-            <div class="jobs-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-count="1240">0</span>
-                    <div class="stat-label">Active Jobs</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="450">0</span>
-                    <div class="stat-label">Companies</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="8900">0</span>
-                    <div class="stat-label">Job Seekers</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="98">0</span>
-                    <div class="stat-label">% Success Rate</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+</section>
     <!-- SECTION: CONTACT -->
     <section class="contact-section" id="contact">
         <div class="container">

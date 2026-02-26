@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#003366">
+    <meta name="description"
+        content="NTI Career - Browse over 1,240 tech jobs from top companies in Egypt and worldwide">
+    <title>NTI Career - All Available Jobs</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Deferred CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    </noscript>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/jobs.css">
+</head>
+
+<body>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+        <div class="drawer-header">
+            <a class="navbar-brand" href="home.html">NTI <span>CAREER</span></a>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="drawer-nav">
+            <a href="home.html" class="active">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="#">Companies</a>
+            <a href="#">Articles</a>
+        </div>
+        <div class="drawer-actions">
+            <a href="sign-in.html" class="btn-nav btn-nav-login" style="text-align: center;">Login</a>
+            <a href="register.html" class="btn-nav btn-nav-register" style="text-align: center;">Register</a>
+        </div>
+    </nav>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-inner container-adaptive">
+            <a class="navbar-brand" href="home.html">NTI <span>CAREER</span></a>
+
+            <div class="nav-desktop">
+                <ul class="nav-links">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="jobs.html" class="nav-link active">Jobs</a></li>
+                    <li><a href="#" class="nav-link">Companies</a></li>
+                    <li><a href="#" class="nav-link">Articles</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="sign-in.html" class="btn-nav btn-nav-login">Login</a>
+                    <a href="register.html" class="btn-nav btn-nav-register">Register</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container-adaptive page-header-content">
+            <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Available Jobs</li>
+                </ol>
+            </nav>
+            <h1 class="page-title">Discover Your Next Opportunity</h1>
+            <p class="page-subtitle">Browse over 1,240 jobs in various tech fields from top companies in Egypt and
+                worldwide</p>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="stat-content">
+                        <h4 id="totalJobsCount">1,240</h4>
+                        <p>Available Jobs</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="stat-content">
+                        <h4>450</h4>
+                        <p>Partner Companies</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-content">
+                        <h4>8,900</h4>
+                        <p>Job Seekers</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-check-circle"></i></div>
+                    <div class="stat-content">
+                        <h4>98%</h4>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container-adaptive">
+            <div class="filter-grid">
+                <div class="search-box">
+                    <input type="text" placeholder="Search for job, company, or skill..." id="searchInput"
+                        aria-label="Search jobs">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+                <div class="filter-chips">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fa-solid fa-border-all"></i> All
+                    </button>
+                    <button class="filter-btn" data-category="programming">
+                        <i class="fa-solid fa-code"></i> Programming
+                    </button>
+                    <button class="filter-btn" data-category="design">
+                        <i class="fa-solid fa-palette"></i> Design
+                    </button>
+                    <button class="filter-btn" data-category="marketing">
+                        <i class="fa-solid fa-bullhorn"></i> Marketing
+                    </button>
+                    <button class="filter-btn" data-category="management">
+                        <i class="fa-solid fa-users-gear"></i> Management
+                    </button>
+                    <button class="filter-btn d-lg-none" id="mobileFilterBtn">
+                        <i class="fa-solid fa-filter"></i> Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-adaptive">
+            <div class="main-layout">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar-filters" id="sidebarFilters">
+                    <div class="filter-group">
+                        <h4 class="filter-group-title">
+                            <i class="fa-solid fa-location-dot"></i> Location
+                        </h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="cairo" class="location-filter">
+                                <span>Cairo</span>
+                                <span class="count">450</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="alexandria" class="location-filter">
+                                <span>Alexandria</span>
+                                <span class="count">180</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="giza" class="location-filter">
+                                <span>Giza</span>
+                                <span class="count">120</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="remote" class="location-filter">
+                                <span>Remote</span>
+                                <span class="count">320</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 class="filter-group-title">
+                            <i class="fa-solid fa-clock"></i> Job Type
+                        </h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="full-time" class="type-filter">
+                                <span>Full Time</span>
+                                <span class="count">890</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="part-time" class="type-filter">
+                                <span>Part Time</span>
+                                <span class="count">150</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="contract" class="type-filter">
+                                <span>Contract</span>
+                                <span class="count">80</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="freelance" class="type-filter">
+                                <span>Freelance</span>
+                                <span class="count">120</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 class="filter-group-title">
+                            <i class="fa-solid fa-money-bill-wave"></i> Salary (EGP)
+                        </h4>
+                        <div class="salary-range">
+                            <input type="range" class="range-slider" min="5000" max="100000" value="5000"
+                                id="salaryRange" aria-label="Minimum salary">
+                            <div class="salary-values">
+                                <span>5,000</span>
+                                <span id="salaryValue">50,000+ EGP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 class="filter-group-title">
+                            <i class="fa-solid fa-star"></i> Experience
+                        </h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="entry" class="exp-filter">
+                                <span>Entry Level (0-2 years)</span>
+                                <span class="count">340</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="mid" class="exp-filter">
+                                <span>Mid Level (2-5 years)</span>
+                                <span class="count">520</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" value="senior" class="exp-filter">
+                                <span>Senior Level (5+ years)</span>
+                                <span class="count">380</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button class="btn-filter-apply" onclick="applyFilters()">Apply Filters</button>
+                        <button class="btn-filter-reset" onclick="resetFilters()">Reset All</button>
+                    </div>
+                </aside>
+
+                <!-- Mobile Filter Overlay -->
+                <div class="filter-overlay d-lg-none" id="filterOverlay"></div>
+
+                <!-- Jobs Grid -->
+                <div class="job-card-container">
+                    <div class="results-header">
+                        <p class="results-count">
+                            Showing <strong id="showingStart">1</strong> - <strong id="showingEnd">10</strong> of
+                            <strong id="showingTotal">1,240</strong> jobs
+                        </p>
+                        <select class="sort-select" id="sortSelect" aria-label="Sort jobs">
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="salary-high">Salary: High to Low</option>
+                            <option value="salary-low">Salary: Low to High</option>
+                        </select>
+                    </div>
+
+                    <div class="active-filters" id="activeFilters"></div>
+
+                    <div class="jobs-grid" id="jobsContainer"></div>
+
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon"><i class="fa-solid fa-search"></i></div>
+                        <h3>No Jobs Found</h3>
+                        <p>Try adjusting your filters or search criteria to find more opportunities.</p>
+                        <button class="btn-filter-apply" onclick="resetFilters()" style="margin-top: 16px;">Clear All
+                            Filters</button>
+                    </div>
+
+                    <nav class="pagination-wrapper" aria-label="Pagination">
+                        <ul class="pagination" id="pagination"></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-adaptive">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">NTI <span>CAREER</span></div>
+                    <p class="footer-text">Egypt's leading platform for tech jobs and training. We connect Egyptian
+                        talent with top global companies.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="#">Paths</a></li>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="newsletter-title">Newsletter</h4>
+                    <p class="newsletter-text">Subscribe to get the latest jobs and news</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email" aria-label="Email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NTI Career. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Deferred Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- External JavaScript -->
+    <script src="js/jobs.js"></script>
+</body>
+
+</html>

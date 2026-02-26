@@ -232,176 +232,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // section 3
-
+ // Save button functionality
+        document.querySelectorAll('.btn-save').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('saved');
+                const icon = this.querySelector('i');
+                if (this.classList.contains('saved')) {
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                } else {
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                }
+            });
+        });
 // ==========================================
 // LATEST JOBS DUAL CAROUSEL FUNCTIONALITY
 // ==========================================
-
-const jobsSection = document.querySelector(".jobs-section");
-
-if (jobsSection) {
-  // Clone cards for infinite scroll effect
-  const tracks = document.querySelectorAll(".carousel-track");
-
-  tracks.forEach((track) => {
-    const cards = track.innerHTML;
-    // Duplicate the content for seamless infinite loop
-    track.innerHTML = cards + cards;
-  });
-
-  // Speed control based on scroll position
-  let scrollSpeed = 1;
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-    const scrollDirection = currentScrollY > lastScrollY ? 1 : -1;
-
-    // Adjust animation speed based on scroll
-    if (Math.abs(currentScrollY - lastScrollY) > 50) {
-      tracks.forEach((track, index) => {
-        const currentDuration = parseFloat(
-          getComputedStyle(track).animationDuration,
-        );
-        const newDuration =
-          scrollDirection > 0 ? currentDuration * 0.8 : currentDuration * 1.2;
-        track.style.animationDuration = `${Math.max(20, Math.min(60, newDuration))}s`;
-      });
-    }
-
-    lastScrollY = currentScrollY;
-  });
-
-  // Interactive hover effects
-  const jobCards = document.querySelectorAll(".job-card");
-
-  jobCards.forEach((card) => {
-    card.addEventListener("mouseenter", function () {
-      // Slow down nearby tracks
-      tracks.forEach((track) => {
-        if (track.contains(this)) {
-          track.style.animationPlayState = "paused";
-        } else {
-          track.style.filter = "blur(2px)";
-          track.style.opacity = "0.7";
-        }
-      });
-    });
-
-    card.addEventListener("mouseleave", function () {
-      tracks.forEach((track) => {
-        track.style.animationPlayState = "running";
-        track.style.filter = "none";
-        track.style.opacity = "1";
-      });
-    });
-
-    // Click to apply effect
-    card.addEventListener("click", function (e) {
-      if (!e.target.closest(".btn-apply")) {
-        const btn = this.querySelector(".btn-apply");
-
-        // Ripple effect
-        const ripple = document.createElement("div");
-        ripple.style.cssText = `
-                        position: absolute;
-                        border-radius: 50%;
-                        background: rgba(0, 174, 239, 0.3);
-                        transform: scale(0);
-                        animation: ripple 0.6s linear;
-                        pointer-events: none;
-                    `;
-
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        ripple.style.width = ripple.style.height = size + "px";
-        ripple.style.left = e.clientX - rect.left - size / 2 + "px";
-        ripple.style.top = e.clientY - rect.top - size / 2 + "px";
-
-        this.style.position = "relative";
-        this.style.overflow = "hidden";
-        this.appendChild(ripple);
-
-        setTimeout(() => ripple.remove(), 600);
-
-        // Simulate apply click
-        setTimeout(() => {
-          if (btn) btn.click();
-        }, 300);
-      }
-    });
-  });
-
-  // Add ripple animation keyframes dynamically
-  const style = document.createElement("style");
-  style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        const filter = this.dataset.filter;
+        const cards = document.querySelectorAll('.track-card');
+        
+        cards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.classList.remove('hidden');
+                card.style.animation = 'fadeInUp 0.5s ease';
+            } else {
+                card.classList.add('hidden');
             }
-        `;
-  document.head.appendChild(style);
-
-  // Stats counter animation
-  const statNumbers = document.querySelectorAll(".stat-number");
-  const statsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const target = entry.target;
-          const finalNumber = parseInt(target.getAttribute("data-count"));
-          animateCounter(target, 0, finalNumber, 2000);
-          statsObserver.unobserve(target);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
-
-  statNumbers.forEach((stat) => {
-    statsObserver.observe(stat);
-  });
-}
-
-// ==========================================
-// UTILITY FUNCTIONS
-// ==========================================
-
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Smooth parallax effect for hero blobs
-window.addEventListener(
-  "scroll",
-  debounce(() => {
-    const scrolled = window.pageYOffset;
-    const blobs = document.querySelectorAll(".blob");
-
-    blobs.forEach((blob, index) => {
-      const speed = 0.5 + index * 0.2;
-      blob.style.transform = `translateY(${scrolled * speed}px)`;
+        });
     });
-  }, 10),
-);
-
-// dark mode
-
-const darkModeToggle = () => {
-  document.body.classList.toggle("dark-mode");
-  localStorage.setItem("theme", "dark");
-};
-
+});
 // ==========================================
 // CONTACT FORM HANDLING
 // ==========================================
@@ -494,83 +361,82 @@ window.resetForm = function () {
     successMessage.classList.remove("show");
   }
 };
+        // ==========================================
+        // FOOTER FUNCTIONALITY
+        // ==========================================
 
-// ==========================================
-// FOOTER FUNCTIONALITY
-// ==========================================
+        // Newsletter Form
+        const newsletterForm = document.getElementById("newsletterForm");
+        if (newsletterForm) {
+            newsletterForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const btn = this.querySelector(".newsletter-btn");
+                const input = this.querySelector(".newsletter-input");
 
-// Newsletter Form
-const newsletterForm = document.getElementById("newsletterForm");
-if (newsletterForm) {
-  newsletterForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const btn = this.querySelector(".newsletter-btn");
-    const input = this.querySelector(".newsletter-input");
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
 
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    btn.style.background = "#28a745";
+                    input.value = "";
 
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fa-solid fa-check"></i>';
-      btn.style.background = "#28a745";
-      input.value = "";
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i>';
+                        btn.style.background = "";
+                    }, 2000);
+                }, 1500);
+            });
+        }
 
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i>';
-        btn.style.background = "";
-      }, 2000);
-    }, 1500);
-  });
-}
+        // Footer Stats Counter
+        const footerStats = document.querySelectorAll(".footer-stat-number");
+        const footerStatsObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalNumber = parseInt(target.getAttribute("data-count"));
+                        const suffix = target.parentElement.textContent.includes("%") ? "%" : "+";
 
-// Footer Stats Counter
-const footerStats = document.querySelectorAll(".footer-stat-number");
-const footerStatsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const finalNumber = parseInt(target.getAttribute("data-count"));
-        const suffix = target.textContent.includes("%") ? "%" : "+";
+                        animateCounter(target, 0, finalNumber, 2000, suffix);
+                        footerStatsObserver.unobserve(target);
+                    }
+                });
+            },
+            { threshold: 0.5 },
+        );
 
-        animateCounter(target, 0, finalNumber, 2000, suffix);
-        footerStatsObserver.unobserve(target);
-      }
-    });
-  },
-  { threshold: 0.5 },
-);
+        footerStats.forEach((stat) => footerStatsObserver.observe(stat));
 
-footerStats.forEach((stat) => footerStatsObserver.observe(stat));
+        // Back to Top Button
+        const backToTop = document.getElementById("backToTop");
+        if (backToTop) {
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add("show");
+                } else {
+                    backToTop.classList.remove("show");
+                }
+            });
 
-// Back to Top Button
-const backToTop = document.getElementById("backToTop");
-if (backToTop) {
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
-    }
-  });
+            backToTop.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
 
-  backToTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
-
-// Enhanced Counter Function with suffix
-function animateCounter(element, start, end, duration, suffix = "") {
-  let startTimestamp = null;
-  const step = (timestamp) => {
-    if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    const currentCount = Math.floor(progress * (end - start) + start);
-    element.textContent =
-      currentCount.toLocaleString() + (suffix === "%" ? "%" : "+");
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
-  };
-  window.requestAnimationFrame(step);
-}
+        // Enhanced Counter Function with suffix
+        function animateCounter(element, start, end, duration, suffix = "") {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentCount = Math.floor(progress * (end - start) + start);
+                element.textContent =
+                    currentCount.toLocaleString() + (suffix === "%" ? "%" : "+");
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
