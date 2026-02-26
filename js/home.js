@@ -232,20 +232,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // section 3
- // Save button functionality
-        document.querySelectorAll('.btn-save').forEach(btn => {
-            btn.addEventListener('click', function() {
-                this.classList.toggle('saved');
-                const icon = this.querySelector('i');
-                if (this.classList.contains('saved')) {
-                    icon.classList.remove('fa-regular');
-                    icon.classList.add('fa-solid');
-                } else {
-                    icon.classList.remove('fa-solid');
-                    icon.classList.add('fa-regular');
-                }
-            });
-        });
+// Save button functionality for Latest Jobs Section
+document.querySelectorAll('.btn-save').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('saved');
+        const icon = this.querySelector('i');
+        if (this.classList.contains('saved')) {
+            icon.classList.remove('fa-regular', 'fa-bookmark');
+            icon.classList.add('fa-solid', 'fa-bookmark');
+            // Optional: Add a subtle animation
+            this.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        } else {
+            icon.classList.remove('fa-solid', 'fa-bookmark');
+            icon.classList.add('fa-regular', 'fa-bookmark');
+        }
+    });
+});
+
+// Initialize carousel with touch support for mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const jobsCarousel = document.getElementById('jobsCarousel');
+    if (jobsCarousel) {
+        // Enable swipe on mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        jobsCarousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        jobsCarousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left - next slide
+                bootstrap.Carousel.getInstance(jobsCarousel).next();
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swipe right - previous slide
+                bootstrap.Carousel.getInstance(jobsCarousel).prev();
+            }
+        }
+    }
+});
 // ==========================================
 // LATEST JOBS DUAL CAROUSEL FUNCTIONALITY
 // ==========================================

@@ -299,204 +299,329 @@
 
 
 
+<!-- SECTION 3: LATEST JOBS -->
+<section class="latest-jobs-section" id="latest-jobs">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
 
-    <!-- SECTION 2: POPULAR CATEGORIES CAROUSEL -->
-    <section class="categories-section" id="tracks">
-        <div class="bg-shape shape-1"></div>
-        <div class="bg-shape shape-2"></div>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Latest Jobs</h2>
+        </div>
 
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Explore Opportunities</span>
-                <h2 class="section-title">Popular Categories</h2>
-                <p class="section-desc">
-                    Discover top career paths and training tracks. Browse through our most popular categories
-                    and find the perfect match for your skills and ambitions.
-                </p>
-            </div>
+        <div class="jobs-carousel-wrapper">
+            <div id="jobsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-            <div class="categories-carousel-wrapper">
-                <div id="categoriesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
 
-                    <!-- Carousel Items -->
-                    <div class="carousel-inner">
-
-                        <!-- Slide 1 -->
-                        <div class="carousel-item active">
-                            <div class="row g-4">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-network-wired category-icon"></i>
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-google"></i>
                                         </div>
-                                        <h3 class="category-title">Network Engineering</h3>
-                                        <span class="category-count">124 Jobs</span>
-                                        <p class="category-desc">Build and maintain complex network infrastructures.
-                                            CCNA, CCNP, and advanced networking certifications.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
+                                        <div class="job-meta">
+                                            <span class="job-type full-time">Full-time</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 2 hours
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">Senior Network Engineer</h3>
+                                    <p class="company-name">Google Egypt</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 25k - 35k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Lead network infrastructure projects for cloud services. CCNP
+                                        certification required.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
                                                 class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-code category-icon"></i>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card featured">
+                                    <div class="featured-badge">Featured</div>
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-microsoft"></i>
                                         </div>
-                                        <h3 class="category-title">Software Development</h3>
-                                        <span class="category-count">256 Jobs</span>
-                                        <p class="category-desc">Full-stack, mobile, and enterprise application
-                                            development. Java, Python, .NET, and modern frameworks.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
+                                        <div class="job-meta">
+                                            <span class="job-type remote">Remote</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 4 hours
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">Full Stack Developer</h3>
+                                    <p class="company-name">Microsoft</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 30k - 45k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Build scalable web applications using .NET Core and React. 3+
+                                        years experience.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
                                                 class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-brain category-icon"></i>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-aws"></i>
                                         </div>
-                                        <h3 class="category-title">AI & Machine Learning</h3>
-                                        <span class="category-count">89 Jobs</span>
-                                        <p class="category-desc">Cutting-edge artificial intelligence, deep learning,
-                                            and data science positions for innovators.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
+                                        <div class="job-meta">
+                                            <span class="job-type contract">Contract</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 6 hours
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">Cloud Solutions Architect</h3>
+                                    <p class="company-name">Amazon Web Services</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i>
+                                            Alexandria</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 40k - 60k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Design cloud infrastructure solutions for enterprise clients.
+                                        AWS certification required.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
                                                 class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Slide 2 -->
-                        <div class="carousel-item">
-                            <div class="row g-4">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-shield-halved category-icon"></i>
-                                        </div>
-                                        <h3 class="category-title">Cybersecurity</h3>
-                                        <span class="category-count">167 Jobs</span>
-                                        <p class="category-desc">Protect organizations from digital threats. Ethical
-                                            hacking, security analysis, and compliance roles.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-database category-icon"></i>
-                                        </div>
-                                        <h3 class="category-title">Data Science</h3>
-                                        <span class="category-count">143 Jobs</span>
-                                        <p class="category-desc">Transform data into insights. Big data analytics,
-                                            visualization, and business intelligence.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-cloud category-icon"></i>
-                                        </div>
-                                        <h3 class="category-title">Cloud Computing</h3>
-                                        <span class="category-count">198 Jobs</span>
-                                        <p class="category-desc">AWS, Azure, and Google Cloud expertise. Cloud
-                                            architecture, DevOps, and infrastructure management.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="carousel-item">
-                            <div class="row g-4">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-mobile-screen category-icon"></i>
-                                        </div>
-                                        <h3 class="category-title">Mobile Development</h3>
-                                        <span class="category-count">112 Jobs</span>
-                                        <p class="category-desc">iOS and Android development. Flutter, React Native, and
-                                            native mobile application engineering.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-paint-brush category-icon"></i>
-                                        </div>
-                                        <h3 class="category-title">UI/UX Design</h3>
-                                        <span class="category-count">76 Jobs</span>
-                                        <p class="category-desc">Create stunning user experiences. Product design,
-                                            interaction design, and usability research.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="category-card">
-                                        <div class="category-icon-wrapper">
-                                            <i class="fa-solid fa-server category-icon"></i>
-                                        </div>
-                                        <h3 class="category-title">System Administration</h3>
-                                        <span class="category-count">134 Jobs</span>
-                                        <p class="category-desc">Linux and Windows server management. Virtualization,
-                                            automation, and IT infrastructure support.</p>
-                                        <a href="#" class="category-link">Explore Jobs <i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
-                    <!-- Controls -->
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-meta"></i>
+                                        </div>
+                                        <div class="job-meta">
+                                            <span class="job-type full-time">Full-time</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 8 hours
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">Cybersecurity Analyst</h3>
+                                    <p class="company-name">Meta</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Giza</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 20k - 28k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Monitor security systems and respond to incidents. CEH or CISSP
+                                        preferred.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </div>
+                                        <div class="job-meta">
+                                            <span class="job-type part-time">Part-time</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 10 hours
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">iOS Developer</h3>
+                                    <p class="company-name">Apple</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 15k - 22k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Develop native iOS applications using Swift and SwiftUI.
+                                        Portfolio required.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card featured">
+                                    <div class="featured-badge">Hot</div>
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-ibm"></i>
+                                        </div>
+                                        <div class="job-meta">
+                                            <span class="job-type full-time">Full-time</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 12 hours
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">Data Scientist</h3>
+                                    <p class="company-name">IBM</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Smart
+                                            Village</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 35k - 50k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Build ML models for business analytics. Python, TensorFlow, and
+                                        SQL required.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-
-                    <button class="carousel-control-next " type="button" data-bs-target="#categoriesCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-
-
-
-
-                    <!-- Indicators -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#categoriesCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#categoriesCarousel" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#categoriesCarousel" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-oracle"></i>
+                                        </div>
+                                        <div class="job-meta">
+                                            <span class="job-type hybrid">Hybrid</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 1 day ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">Database Administrator</h3>
+                                    <p class="company-name">Oracle</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Cairo</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 28k - 38k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Manage Oracle and MySQL databases. Performance tuning and backup
+                                        strategies.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-salesforce"></i>
+                                        </div>
+                                        <div class="job-meta">
+                                            <span class="job-type remote">Remote</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 1 day ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">DevOps Engineer</h3>
+                                    <p class="company-name">Salesforce</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 32k - 48k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Implement CI/CD pipelines and containerization. Docker,
+                                        Kubernetes, Jenkins.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card featured">
+                                    <div class="featured-badge">Urgent</div>
+                                    <div class="job-header">
+                                        <div class="company-logo">
+                                            <i class="fa-brands fa-figma"></i>
+                                        </div>
+                                        <div class="job-meta">
+                                            <span class="job-type contract">Contract</span>
+                                            <span class="job-time"><i class="fa-regular fa-clock"></i> 2 days ago</span>
+                                        </div>
+                                    </div>
+                                    <h3 class="job-title">UI/UX Designer</h3>
+                                    <p class="company-name">Figma</p>
+                                    <div class="job-details">
+                                        <span class="detail-item"><i class="fa-solid fa-location-dot"></i>
+                                            Alexandria</span>
+                                        <span class="detail-item"><i class="fa-solid fa-money-bill-wave"></i> 18k - 25k
+                                            EGP</span>
+                                    </div>
+                                    <p class="job-desc">Design intuitive user interfaces for web and mobile. Figma
+                                        expertise required.</p>
+                                    <div class="job-footer">
+                                        <a href="#" class="btn-apply">Show details<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                        <button class="btn-save"><i class="fa-regular fa-bookmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </div>
 
-            <!-- View All Button -->
-            <div class="text-center mt-5">
-                <a href="#" class="btn btn-outline-primary btn-lg px-5 rounded-pill btn-view-all">
-                    View All Categories <i class="fa-solid fa-grid-2 ms-2"></i>
-                </a>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#jobsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#jobsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#jobsCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#jobsCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#jobsCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
             </div>
         </div>
-    </section>
 
+        <!-- View All Button -->
+        <div class="text-center mt-5">
+            <a href="jobs.html" class="btn btn-outline-primary btn-lg px-5 rounded-pill btn-view-all">
+                View All Jobs <i class="fa-solid fa-briefcase ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
   <!-- section latest jobs -->
         <!-- SECTION: LATEST JOBS - تصميم قائمة مع تفاصيل تفاعلية -->
 <section class="latest-jobs-section" id="find_jobs">
